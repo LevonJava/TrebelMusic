@@ -17,23 +17,23 @@ public class LoginScreen {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/welcome_back")
+    @AndroidFindBy(id = "welcome_back")
     private MobileElement welcomeBack;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/btn_fb")
+    @AndroidFindBy(id = "btn_fb")
     private MobileElement LogInWithFacebook;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/google")
+    @AndroidFindBy(id = "google")
     private MobileElement LogInWithGoogle;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/etEmail")
+    @AndroidFindBy(id = "etEmail")
     private MobileElement emailField;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/etPassword")
+    @AndroidFindBy(id = "etPassword")
     private MobileElement passwordField;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/btnLogin")
+    @AndroidFindBy(id = "btnLogin")
     private MobileElement logInButton;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/forgot_password")
+    @AndroidFindBy(id = "forgot_password")
     private MobileElement forgotYourPassword;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/btn_back")
+    @AndroidFindBy(id = "btn_back")
     private MobileElement backButton;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/error_text")
+    @AndroidFindBy(id = "error_text")
     private MobileElement errorText;
 
 

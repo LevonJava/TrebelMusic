@@ -1,23 +1,20 @@
-package com.trebel.login_accout;
+package com.trebel.test.authentication;
 
+import com.trebel.test.base.BaseTest;
 import com.trebel.screens.CreateYourAccountScreen;
 import com.trebel.screens.HomeScreen;
 import com.trebel.screens.LoginScreen;
-import com.trebel.Base;
-import com.trebel.util.MyListener;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(MyListener.class)
-public class Login extends Base {
+public class Login extends BaseTest {
     protected LoginScreen loginScreen;
     protected HomeScreen homeScreen;
     protected CreateYourAccountScreen createYourAccount;
 
     @BeforeMethod
-    private void setLoginHomeAccountScreens() {
+    private void initLoginHomeAccountScreens() {
         loginScreen = new LoginScreen(driver);
         homeScreen = new HomeScreen(driver);
         createYourAccount = new CreateYourAccountScreen(driver);
@@ -25,11 +22,11 @@ public class Login extends Base {
     }
 
     @Test(description = "TC-1")
-    private void loginWithAlreadyCreatedAccount() {
+    public void loginWithAlreadyCreatedAccount() {
         loginScreen.enterEmail("08lyov91@gmail.com");
         loginScreen.enterPassword("mek222");
         loginScreen.login();
-        homeScreen.clickMenu();
+        homeScreen.clickOnMenu();
         Assert.assertEquals(homeScreen.getUserName(), "08lyov91@gmail.com", "Wrong username");
     }
 

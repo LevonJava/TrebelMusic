@@ -17,19 +17,19 @@ public class CreateAccountScreen {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/etEmail")
+    @AndroidFindBy(id = "etEmail")
     private MobileElement emailField;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/etPassword")
+    @AndroidFindBy(id = "etPassword")
     private MobileElement passwordField;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/btnRegistration")
+    @AndroidFindBy(id = "btnRegistration")
     private MobileElement registrationButton;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/btn_back")
+    @AndroidFindBy(id = "btn_back")
     private MobileElement goBackButton;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/dialog_title")
+    @AndroidFindBy(id = "dialog_title")
     private MobileElement hasAccountTitle;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/dialog_btn_cancel")
+    @AndroidFindBy(id = "dialog_btn_cancel")
     private MobileElement createNewAccountButton;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/dialog_btn_confirm")
+    @AndroidFindBy(id = "dialog_btn_confirm")
     private MobileElement logInExistingAccount;
 
     public void enterEmail(String email) {
@@ -43,7 +43,7 @@ public class CreateAccountScreen {
         passwordField.sendKeys(password);
     }
 
-    public void registrateUser(){
+    public void clickOnRegisterButton(){
         click(registrationButton);
     }
 

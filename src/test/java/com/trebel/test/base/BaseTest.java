@@ -1,4 +1,4 @@
-package com.trebel;
+package com.trebel.test.base;
 
 import com.trebel.screens.GetStartedScreen;
 import io.appium.java_client.android.AndroidDriver;
@@ -10,7 +10,7 @@ import java.net.MalformedURLException;
 import static com.trebel.util.DriverHelper.getDriver;
 import static com.trebel.util.DriverHelper.setDriver;
 
-public class Base {
+public class BaseTest {
     protected AndroidDriver driver;
     protected GetStartedScreen getStartedScreen;
 

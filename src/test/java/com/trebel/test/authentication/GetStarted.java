@@ -1,12 +1,12 @@
-package com.trebel.login_accout;
+package com.trebel.test.authentication;
 
 import com.trebel.screens.CreateYourAccountScreen;
 import com.trebel.screens.LoginScreen;
-import com.trebel.Base;
+import com.trebel.test.base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class GetStarted extends Base {
+public class GetStarted extends BaseTest {
     LoginScreen loginScreen;
     CreateYourAccountScreen createYourAccountScreen;
 

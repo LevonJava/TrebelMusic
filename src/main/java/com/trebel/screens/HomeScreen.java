@@ -17,12 +17,12 @@ public class HomeScreen {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/imgMore")
+    @AndroidFindBy(id = "imgMore")
     private MobileElement menu;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/tvUserName")
+    @AndroidFindBy(id = "tvUserName")
     private MobileElement userName;
 
-    public void clickMenu(){
+    public void clickOnMenu(){
         click(menu);
     }
 

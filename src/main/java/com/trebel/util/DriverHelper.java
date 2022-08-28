@@ -6,6 +6,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import static com.trebel.util.Configuration.BASE_URL;
+
 public class DriverHelper {
     private static AndroidDriver driver = null;
     private static DesiredCapabilities capabilities;
@@ -30,7 +32,7 @@ public class DriverHelper {
 
     public static AndroidDriver getDriver() throws MalformedURLException {
         if (driver == null) {
-            driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub/"), setCapabilities());
+            driver = new AndroidDriver(new URL(BASE_URL), setCapabilities());
         }
         return driver;
     }

@@ -16,7 +16,7 @@ public class GetStartedScreen {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/get_start")
+    @AndroidFindBy(id = "get_start")
     private MobileElement getStarted;
 
     public void clickGetStarted() {

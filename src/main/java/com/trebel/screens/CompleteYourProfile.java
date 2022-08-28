@@ -15,15 +15,15 @@ public class CompleteYourProfile {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/later")
+    @AndroidFindBy(id = "later")
     private MobileElement finishButton;
     @AndroidFindBy(className = "android.widget.TextView")
     private MobileElement skipButton;
-    public void clickFinish() {
+    public void clickOnFinishButton() {
         click(finishButton);
     }
 
-    public void clickSkip() {
+    public void clickOnSkipButton() {
         click(skipButton);
     }
 }

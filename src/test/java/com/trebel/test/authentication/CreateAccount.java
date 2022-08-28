@@ -1,22 +1,22 @@
-package com.trebel.login_accout;
+package com.trebel.test.authentication;
 
 import com.trebel.screens.CompleteYourProfile;
 import com.trebel.screens.CreateAccountScreen;
 import com.trebel.screens.CreateYourAccountScreen;
 import com.trebel.screens.HomeScreen;
-import com.trebel.Base;
+import com.trebel.test.base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class CreateAccount extends Base {
+public class CreateAccount extends BaseTest {
     protected CreateYourAccountScreen createYourAccountScreen;
     protected CreateAccountScreen createAccountScreen;
     protected CompleteYourProfile completeYourProfile;
     protected HomeScreen homeScreen;
 
     @BeforeMethod
-    private void setScreens() {
+    private void initScreens() {
         createYourAccountScreen = new CreateYourAccountScreen(driver);
         createAccountScreen = new CreateAccountScreen(driver);
         completeYourProfile = new CompleteYourProfile(driver);
@@ -28,17 +28,17 @@ public class CreateAccount extends Base {
     public void createAccount() {
         createAccountScreen.enterEmail("08lyov91@gmail.com");
         createAccountScreen.enterPassword("mekk22");
-        createAccountScreen.registrateUser();
+        createAccountScreen.clickOnRegisterButton();
         Assert.assertTrue(createAccountScreen.isMessageDisplayed());
     }
     @Test(description = "TC-3")
     public void createNewAccount() {
-        createAccountScreen.enterEmail("baron17@mail.ru");
+        createAccountScreen.enterEmail("baron18@mail.ru");
         createAccountScreen.enterPassword("777777");
-        createAccountScreen.registrateUser();
-        completeYourProfile.clickFinish();
-        completeYourProfile.clickSkip();
-        homeScreen.clickMenu();
-        Assert.assertEquals(homeScreen.getUserName(), "baron17@mail.ru", "Wrong Username");
+        createAccountScreen.clickOnRegisterButton();
+        completeYourProfile.clickOnFinishButton();
+        completeYourProfile.clickOnSkipButton();
+        homeScreen.clickOnMenu();
+        Assert.assertEquals(homeScreen.getUserName(), "baron18@mail.ru", "Wrong Username");
     }
 }

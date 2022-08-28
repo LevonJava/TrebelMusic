@@ -17,15 +17,15 @@ public class CreateYourAccountScreen {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/create_free_account")
+    @AndroidFindBy(id = "create_free_account")
     private MobileElement createFreeAccountTitle;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/btn_fb")
+    @AndroidFindBy(id = "btn_fb")
     private MobileElement continueWithFacebook;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/google")
+    @AndroidFindBy(id = "google")
     private MobileElement continueWithGoogle;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/tv_create_with_email")
+    @AndroidFindBy(id = "tv_create_with_email")
     private MobileElement createAccountWithEmail;
-    @AndroidFindBy(id = "com.mmm.trebelmusic:id/already")
+    @AndroidFindBy(id = "already")
     private MobileElement login;
 
     public void clickLogInButton() {
