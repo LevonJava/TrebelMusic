@@ -4,10 +4,13 @@ import com.trebel.screens.CreateYourAccountScreen;
 import com.trebel.screens.HomeScreen;
 import com.trebel.screens.LoginScreen;
 import com.trebel.Base;
+import com.trebel.util.MyListener;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(MyListener.class)
 public class Login extends Base {
     protected LoginScreen loginScreen;
     protected HomeScreen homeScreen;

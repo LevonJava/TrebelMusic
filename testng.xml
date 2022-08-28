@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Testing TrebelMusicApplication">
+    <test name="Black Box">
+        <classes>
+            <class name="com.trebel.login_accout.GetStarted"/>
+            <class name="com.trebel.login_accout.CreateAccount"/>
+            <class name="com.trebel.login_accout.Login"/>
+        </classes>
+    </test>
+</suite>
