@@ -24,22 +24,21 @@ public class CreateAccount extends Base {
         createYourAccountScreen.createAccount();
     }
 
-    @Test
+    @Test(description = "TC-2")
     public void createAccount() {
         createAccountScreen.enterEmail("08lyov91@gmail.com");
         createAccountScreen.enterPassword("mekk22");
         createAccountScreen.registrateUser();
         Assert.assertTrue(createAccountScreen.isMessageDisplayed());
     }
-
-    @Test
+    @Test(description = "TC-3")
     public void createNewAccount() {
-        createAccountScreen.enterEmail("baron9@mail.ru");
+        createAccountScreen.enterEmail("baron17@mail.ru");
         createAccountScreen.enterPassword("777777");
         createAccountScreen.registrateUser();
         completeYourProfile.clickFinish();
         completeYourProfile.clickSkip();
         homeScreen.clickMenu();
-        Assert.assertEquals(homeScreen.getUserName(), "baron8@mail.ru", "Wrong Username");
+        Assert.assertEquals(homeScreen.getUserName(), "baron17@mail.ru", "Wrong Username");
     }
 }

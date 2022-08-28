@@ -33,9 +33,15 @@ public class LoginScreen {
     private MobileElement forgotYourPassword;
     @AndroidFindBy(id = "com.mmm.trebelmusic:id/btn_back")
     private MobileElement backButton;
+    @AndroidFindBy(id = "com.mmm.trebelmusic:id/error_text")
+    private MobileElement errorText;
+
 
     public String getWelcomeBackText(){
         return getText(welcomeBack);
+    }
+    public String getErrorText(){
+        return getText(errorText);
     }
 
     public void enterEmail(String email) {
